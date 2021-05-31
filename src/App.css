@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');
+:root {
+  --color-primary: #faf3f3;
+  --color-secondary: #a7bbc7;
+  --color-terciary: #da7f8f;
+  /* 4to color #e1e5ea */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.body {
+  background-color: var(--color-primary);
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar{
+  background-color: var(--color-secondary);
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  height: fit-content
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbarlogo2{
+  height: 60px ;
+  margin-right: 2%;
 }
 
-.App-link {
-  color: #61dafb;
+a:link, a:visited, a:active {
+  text-decoration: none;
+  color:var(--color-primary);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-item{
+  color: var(--color-primary);
+}
+
+.nav-item a:hover{
+  color: var(--color-terciary);
+}
+
+.nav-link:hover{
+  color: var(--color-primary);
+}
+
+.nav-link:focus{
+  color: var(--color-primary);
+}
+
+.dropdown-menu{
+  background-color: var(--color-primary);
+  background-color:#e7eaee ;
+}
+
+.dropdown-menu li a{
+  color: var(--color-secondary);
+  /* color: var(--color-terciary); */
+  font-size: 1.2rem;
+}
+
+.dropdown-menu li a:hover{
+  color: var(--color-terciary);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.btn{
+  background-color: var(--color-terciary);
+  border: var(--color-terciary);
+  color: var(--color-primary);
+  font-size: 1.2rem;
+}
+
+
+.btn:hover{
+  background-color:#e7eaee  ;
+  border: #e7eaee ;
+  color: var(--color-secondary);
+  font-size: 1.2rem;
+}
+
+.btn:focus{
+  background-color: var(--color-terciary);
+  border: var(--color-terciary);
+  color: var(--color-primary);
+  font-size: 1.2rem;
+}
+
+
+.section{ 
+  margin-top:3%;
+}
+
+.navbar-toggler{
+  background-color: var(--color-terciary);
+  border: solid 2px #da7f8f;
+}
+
+.navbar-toggler span{
+  /* background-color: #da7f8f; */
+  
+}
+
+.fas{
+  margin-top: 4px;
+  color: var(--color-terciary);
+}
+
+.fa-bars{
+  color: #e7eaee;
 }
