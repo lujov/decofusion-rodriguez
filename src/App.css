@@ -11,7 +11,7 @@
   font-family: 'Open Sans Condensed', sans-serif;
 }
 
-.navbar{
+/* .navbar{
   background-color: var(--color-secondary);
   font-size: 1.5rem;
   color: var(--color-primary);
@@ -21,16 +21,17 @@
 .navbarlogo2{
   height: 60px ;
   margin-right: 2%;
-}
+} */
 
 a:link, a:visited, a:active {
   text-decoration: none;
   color:var(--color-primary);
+  
 }
 
-.nav-item{
+/* .nav-item{
   color: var(--color-primary);
-}
+} */
 
 .nav-item a:hover{
   color: var(--color-terciary);
@@ -47,6 +48,7 @@ a:link, a:visited, a:active {
 .dropdown-menu{
   background-color: var(--color-primary);
   background-color:#e7eaee ;
+  
 }
 
 .dropdown-menu li a{
@@ -88,14 +90,9 @@ a:link, a:visited, a:active {
   margin-top:3%;
 }
 
-.navbar-toggler{
+.BOTONMENU{
   background-color: var(--color-terciary);
   border: solid 2px #da7f8f;
-}
-
-.navbar-toggler span{
-  /* background-color: #da7f8f; */
-  
 }
 
 .fas{
