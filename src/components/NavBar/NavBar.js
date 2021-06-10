@@ -11,12 +11,12 @@ export const NavBar = () => {
     const classes = useStyles();
 
     return <>
-        <body className="body">
+        <section className="body">
             <nav className={classes.container}>
                 <div>
                     <img src= {logo2} alt="logo"></img>
                     <button type="button">
-                        <i class="fas fa-bars"></i>
+                        <i className="fas fa-bars"></i>
                     </button>
                     <ul>
                         <li>
@@ -36,7 +36,7 @@ export const NavBar = () => {
                     <CardWidgets/>
                 </form>
             </nav>
-        </body>
+        </section>
     </>;     
     
   }
