@@ -13,7 +13,7 @@ export const ItemCount = ({ stock, initial }) => {
     const [count,setcount ] = useState(parseInt(initial));
 
     const addStock = () => {
-       count < 7 ? setcount(count + 1) : setcount(count);
+       count < stock ? setcount(count + 1) : setcount(count);
     };
 
     const removeStock = () => {
