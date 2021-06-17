@@ -8,16 +8,18 @@ import { ItemCountStyle } from './ItemCountStyle';
 const useStyles = makeStyles((theme) => ItemCountStyle(theme));
 
 
-export const ItemCount = ({ stock, initial }) => {
+export const ItemCount = ({ stock, initial,onAdd }) => {
     const classes = useStyles();
     const [count,setcount ] = useState(parseInt(initial));
 
     const addStock = () => {
        count < stock ? setcount(count + 1) : setcount(count);
+       count < stock ? onAdd(count + 1) : onAdd(count);
     };
 
     const removeStock = () => {
-      count > 0 ? setcount(count - 1): setcount(count);
+      count > initial ? setcount(count - 1): setcount(count);
+      count > stock ? onAdd(count - 1) : onAdd(count);
    };
 
     return <div className={classes.container}>
