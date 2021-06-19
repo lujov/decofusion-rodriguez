@@ -1,38 +1,92 @@
+
 export const ItemDetailStyle = theme => {
     return({
         container:{
             width:'fit-content',
             display:'flex',
-            gap:'10%',
+            gap:'5%',
+            boxSizing: "border-box",
             '& div >h4':{
-                color: 'var(--color-terciary)',
+                margin:0,
+                fontWeight:'100'
             },
             '& div > h3':{
-                marginTop: 0,
+                margin: 0,
                 color: '#a7bbc7',
+                fontFamily: "'Maitree', serif",
+                fontSize:'2rem',
+                '@media (max-width:480px)': {
+                    fontSize:'1.5rem',    
+                }
             },
-            '& img':{
-                width:'50%',
+            '& div> p':{
+                margin:0
+            },
+            '& div > span':{
+                fontSize:'1.5rem',
+                color:'var(--color-terciary)',
+                fontWeight:'bold',
+                marginTop:'3%'
             },
             '& div > div':{
-                display:'flex',
-                gap:'5%',
-                justifyContent:'space-between',
-                height:'fit-content',
                 '& button':{
                     border:'solid 2px #a7bbc7',
                     backgroundColor: '#e1e5ea',
                     borderRadius: '11px',
                     padding: '0.5em 1em',
+                    fontFamily: "'Maitree', serif",
+                    fontWeight:'400',
+                    color:'grey',
+                    fontSize:'1rem'
                 },
                 '& button:hover':{
                     backgroundColor: '#da93a0',
                     border:'solid 2px #da93a0',
-                    cursor:'pointer'
+                    cursor:'pointer',
+                    color:'white'
                 }
-            }, 
-            
-        }
+            },
+            '@media (max-width:1065px)': {
+                flexDirection:'column',
+                alignItems:'center'    
+            }            
+        },
+        imgContainer:{
+            width:'60%',
+            '& img': {
+                width: "100%",
+                height: "auto"
+            },
+            '@media (max-width:1065px)': {
+                width:'80%'   
+            } 
+        },
+        infoContainer:{
+            width:'40%',
+            '@media (max-width:1065px)': {
+                width:'80%'   
+            } 
+        },
+        iconContainer:{
+            display:'flex',
+            justifyContent:'flex-start',
+            gap:'2%',
+            margin:'3% 0'
+        },
+        btn: {
+            display:'flex',
+            gap:'5%',
+            justifyContent:'space-between',
+            height:'fit-content',
+            margin:'5% 0',
+        },
+        icon:{
+            color:'var(--color-terciary)'
+        },
+        formControl:{
+            width:'30%',
+            marginBottom: '4%',
+        },
     })
     
 }

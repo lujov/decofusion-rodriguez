@@ -23,6 +23,7 @@ export const NavBarStyle = theme => {
                     color:'var(--color-primary)',
                     fontSize: '1.2rem',
                     marginBottom: '4px',
+                    
                    
                 }
             },
