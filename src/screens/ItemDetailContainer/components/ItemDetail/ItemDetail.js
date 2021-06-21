@@ -1,5 +1,5 @@
 import React from 'react';
-import { ItemDetailStyle } from './ItemDetailStyle';
+import { ItemDetailStyle } from '../ItemDetail/ItemDetailStyle';
 import { makeStyles } from '@material-ui/core';
 import { ItemCount } from '../ItemCount/ItemCount';
 import { CreditCard } from '@material-ui/icons';

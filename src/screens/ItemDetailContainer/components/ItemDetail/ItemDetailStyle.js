@@ -8,7 +8,8 @@ export const ItemDetailStyle = theme => {
             boxSizing: "border-box",
             '& div >h4':{
                 margin:0,
-                fontWeight:'100'
+                fontWeight:'100',
+                color: 'rgb(95, 95, 95)',
             },
             '& div > h3':{
                 margin: 0,
@@ -20,7 +21,8 @@ export const ItemDetailStyle = theme => {
                 }
             },
             '& div> p':{
-                margin:0
+                margin:0,
+                color: 'rgb(95, 95, 95)',
             },
             '& div > span':{
                 fontSize:'1.5rem',

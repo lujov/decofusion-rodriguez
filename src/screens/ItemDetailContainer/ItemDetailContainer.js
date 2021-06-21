@@ -1,7 +1,8 @@
 import React, {useEffect,useState} from 'react';
-import { ItemDetailContainerStyle } from './ItemDetailContainerStyle';
+import { ItemDetailContainerStyle } from '../ItemDetailContainer/ItemDetailContainerStyle';
 import { makeStyles } from '@material-ui/core';
-import { ItemDetail } from '../ItemDetail/ItemDetail';
+import { ItemDetail } from '../ItemDetailContainer/components/ItemDetail/ItemDetail';
+import { useParams } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ItemDetailContainerStyle(theme));
 
@@ -23,6 +24,7 @@ const getItems = () => {
 
 export const ItemDetailContainer = () => {
     const classes = useStyles();
+    const { id } = useParams();
     const [productoSeleccionado, setProductoSeleccionado] = useState([]);
 
     useEffect(() => {
@@ -31,9 +33,12 @@ export const ItemDetailContainer = () => {
         )
     },[]);
 
+    useEffect(() => {}, [id]);
+
+    const filterId = productoSeleccionado => productoSeleccionado.filter(producto => producto.id === id);
+
     return <section className={classes.container}>
-        <h1>ITEM DETALLE</h1>
-        <ItemDetail item={productoSeleccionado}/>
+        <ItemDetail item={filterId(productoSeleccionado)}/>
 
     </section>;
 

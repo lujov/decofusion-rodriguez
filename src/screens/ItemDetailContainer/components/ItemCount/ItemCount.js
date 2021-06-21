@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core';
 import { Add } from '@material-ui/icons';
 import { Remove } from '@material-ui/icons';
-import { ItemCountStyle } from './ItemCountStyle';
+import { ItemCountStyle } from '../ItemCount/ItemCountStyle';
 
 
 const useStyles = makeStyles((theme) => ItemCountStyle(theme));

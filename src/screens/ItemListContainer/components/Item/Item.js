@@ -1,5 +1,5 @@
 import React from 'react';
-import { ItemStyle } from './ItemStyle';
+import { ItemStyle } from '../Item/ItemStyle';
 import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ItemStyle(theme));

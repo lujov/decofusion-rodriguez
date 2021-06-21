@@ -1,10 +1,10 @@
 export const ItemStyle = theme => {
     return ({
         container: {
-            width: '20%',
+            width: '100%',
             boxShadow: '1px 1px 5px 2px rgba(0, 0, 0, 0.308)',
             boxSizing: 'border-box',
-            padding: '1.5%',
+            padding: '4%',
             display:'flex',
             flexDirection:'column',
             alignItems: 'center',

@@ -1,9 +1,10 @@
 import React from 'react'; 
 import logo2 from'./logo2.png'
-import { NavBarStyle } from './NavBarStyle';
+import { NavBarStyle } from '../NavBar/NavBarStyle';
 import { makeStyles } from '@material-ui/core';
 import {Search} from '@material-ui/icons';
-import {CardWidgets} from '../CardWidgets/CardWidgets'
+import {CardWidgets} from '../NavBar/CardWidgets/CardWidgets';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => NavBarStyle(theme));
 
@@ -20,10 +21,10 @@ export const NavBar = () => {
                     </button>
                     <ul>
                         <li>
-                            <a href="/#">HOME</a>
+                            <a href="/#"><Link to={'/'}>HOME</Link></a>
                         </li>
                         <li>
-                            <a href="/#">PRODUCTOS</a>
+                            <a href="/#"><Link to={'/productos'}>PRODUCTOS</Link></a>
                         </li>
                         <li>
                         <a href="/#">CONTACTO</a>
