@@ -7,13 +7,9 @@ export const NavBarStyle = theme => {
             color: 'var(--color-primary)',
             height: 'fit-content',
             display: 'flex',
-            alignItems:'center',
+            alignItems:'flex-start',
             justifyContent:'space-between',
             padding: '0 1%',
-            '& > div > img': {
-                height: '70px' ,
-                marginRight: '6%',
-            },
             '& > div > button': {
                 display:'none',
                 backgroundColor: 'var(--color-terceary)',
@@ -23,13 +19,11 @@ export const NavBarStyle = theme => {
                     color:'var(--color-primary)',
                     fontSize: '1.2rem',
                     marginBottom: '4px',
-                    
-                   
                 }
             },
             '& > div':{
                 display:'flex',
-                alignItems:'center',
+                alignItems:'flex-start',
                 justifyContent:'space-between',
                 width:'40%',
             },
@@ -45,17 +39,14 @@ export const NavBarStyle = theme => {
                 color: 'var(--color-primary)',
                 height: 'fit-content',
                 textDecoration: 'none',
-                transition: 'border-bottom 1s',
-                '& :hover': {
-                    borderBottom: 'solid #da7f8f 2px',  
-                },
                 '& a': {
                     color:'var(--color-primary)', 
                     textDecoration: 'none',
                 },
                 '& a:hover': {
-                    color:'var(--color-terciary)'  
-                }
+                    color:'var(--color-terciary)',
+                    borderBottom: 'solid #da7f8f 2px',  
+                },        
             },
             '& > form':{
                 display:'flex',
@@ -63,6 +54,7 @@ export const NavBarStyle = theme => {
                 justifyContent:'flex-end',
                 gap:'3%',
                 width:'30%',
+                marginTop:'22px',
                 '& button': {
                     backgroundColor: 'var(--color-secondary)',
                     border:'none'
@@ -92,10 +84,35 @@ export const NavBarStyle = theme => {
             
             
         },
+        linkImg:{
+            '& img':{
+                height: '70px' ,
+                marginRight: '6%',
+                marginTop: '5px',
+            },
+        },
         btn: {
             color:'var(--color-primary)', 
             cursor:'pointer'
 
-        }
-    })
+        },
+        subMenu:{
+            '& ul':{
+                listStyle:'none',
+                height:0,
+                opacity:0,
+                transition:'all 1s ease',
+                '& li':{
+                    marginTop:'2px',
+                },
+                '& li:hover':{
+                    color:'#e1e5ea',
+                    cursor:'pointer',
+                }
+            },
+            '&:hover > ul':{
+                height:'200px',
+                opacity:1,
+            }
+    }})
 }

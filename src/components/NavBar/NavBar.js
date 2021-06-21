@@ -15,7 +15,7 @@ export const NavBar = () => {
         <section className="body">
             <nav className={classes.container}>
                 <div>
-                    <img src= {logo2} alt="logo"></img>
+                    <Link className={classes.linkImg} to={'/'}><img src= {logo2} alt="logo"></img></Link>
                     <button type="button">
                         <i className="fas fa-bars"></i>
                     </button>
@@ -23,8 +23,16 @@ export const NavBar = () => {
                         <li>
                             <a href="/#"><Link to={'/'}>HOME</Link></a>
                         </li>
-                        <li>
+                        <li className={classes.subMenu}>
                             <a href="/#"><Link to={'/productos'}>PRODUCTOS</Link></a>
+                            <ul>
+                                <li>Bazar</li>
+                                <li>Oficina</li>
+                                <li>Muebles</li>
+                                <li>Jardin</li>
+                                <li>Textil</li>
+                                <li>Macetas</li>
+                            </ul>
                         </li>
                         <li>
                         <a href="/#">CONTACTO</a>
