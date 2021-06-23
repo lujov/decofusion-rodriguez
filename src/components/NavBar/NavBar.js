@@ -26,12 +26,10 @@ export const NavBar = () => {
                         <li className={classes.subMenu}>
                             <a href="/#"><Link to={'/productos'}>PRODUCTOS</Link></a>
                             <ul>
-                                <li>Bazar</li>
-                                <li>Oficina</li>
-                                <li>Muebles</li>
-                                <li>Jardin</li>
-                                <li>Textil</li>
-                                <li>Macetas</li>
+                                <li><Link to={'/category/1'}>Bazar</Link></li>
+                                <li><Link to={'/category/2'}>Oficina</Link></li>
+                                <li><Link to={'/category/3'}>Jardin</Link></li>
+                                <li><Link to={'/category/4'}>Textil</Link></li>
                             </ul>
                         </li>
                         <li>

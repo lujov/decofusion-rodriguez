@@ -111,7 +111,7 @@ export const NavBarStyle = theme => {
                 }
             },
             '&:hover > ul':{
-                height:'200px',
+                height:'130px',
                 opacity:1,
             }
     }})

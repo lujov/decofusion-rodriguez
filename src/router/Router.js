@@ -18,6 +18,9 @@ export const Router = () => {
                 <Route path="/item/:id">
                     <ItemDetailContainer />
                 </Route>
+                <Route path="/category/:catId">
+                    <ItemListContainer/>
+                </Route>
             </Switch>
         </BrowserRouter>
 }

@@ -2,6 +2,7 @@ export const ItemStyle = theme => {
     return ({
         container: {
             width: '100%',
+            height:'100%',
             boxShadow: '1px 1px 5px 2px rgba(0, 0, 0, 0.308)',
             boxSizing: 'border-box',
             padding: '4%',
@@ -14,6 +15,7 @@ export const ItemStyle = theme => {
             '& p':{
                 width:'75%',
                 textAlign:'center',
+                color:'gray'
             },
             '& span':{
                 color:'#a7bbc7',
@@ -21,7 +23,7 @@ export const ItemStyle = theme => {
                 fontSize:'1.2em'
             },
             '& img':{
-                width:'80%'
+                width:'80%',
             }
 
         }

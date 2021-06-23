@@ -26,24 +26,26 @@ export const ItemDetail = ({ item }) => {
 
     return <article className={classes.container}>
             <div className={classes.imgContainer}>
-                <img src={item.pictureUrl} alt="Producto"></img>
+                <img src={item[0].pictureUrl} alt="Producto"></img>
             </div>
             <div className={classes.infoContainer}>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
+                <h3>{item[0].title}</h3>
+                <p>{item[0].description}</p>
                 <FormControl className={classes.formControl}>
                     <InputLabel id="demo-simple-select-label">Color</InputLabel>
                     <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
-                    value={item.color}
+                    value={item[0].color}
                     >
-                        <MenuItem value={10}>{item.color}</MenuItem>
-                        <MenuItem value={20}>Rosa</MenuItem>
-                        <MenuItem value={30}>Amarillo</MenuItem>
+                        {
+                            item[0].color.map((color,i) =>
+                                <MenuItem value={color} key={i}>{color}</MenuItem>
+                            )
+                        }
                     </Select>
                 </FormControl><br></br>
-                <span>{item.price}</span>
+                <span>{item[0].price}</span>
                 <div className={classes.iconContainer}>
                     <CreditCard className={classes.icon}/><h4>6 cuotas sin interés</h4>
                 </div>
