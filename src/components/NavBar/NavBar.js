@@ -1,6 +1,6 @@
 import React from 'react'; 
-import logo2 from'./logo2.png'
-import { NavBarStyle } from '../NavBar/NavBarStyle';
+import logo2 from'./logo2.png';
+import { NavBarStyle } from './NavBarStyle';
 import { makeStyles } from '@material-ui/core';
 import {Search} from '@material-ui/icons';
 import {CardWidgets} from '../NavBar/CardWidgets/CardWidgets';

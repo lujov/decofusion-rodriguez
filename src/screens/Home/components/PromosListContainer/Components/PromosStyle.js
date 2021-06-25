@@ -10,9 +10,16 @@ export const PromosStyle = theme => {
                 color:'gray'
             },
             '& img':{
-                width: '100%'
+                width: '100%',
+                opacity:'0.7',
+            },
+            '& img:hover':{
+                opacity:'1'
+            },
+            '& :hover > h2':{
+                color:'var(--color-secondary)'
             }
-        }
+        },
     })
     
 }

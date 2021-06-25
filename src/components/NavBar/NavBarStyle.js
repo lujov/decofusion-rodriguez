@@ -71,6 +71,9 @@ export const NavBarStyle = theme => {
                 },
                 '& > div > button': {
                     display:'block',
+                    marginTop:'25px',
+                    marginLeft: '4%'
+
                 },
                 '& > div > ul':{
                     display:'none',
