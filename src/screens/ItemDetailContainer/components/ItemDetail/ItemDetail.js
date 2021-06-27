@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import { ItemDetailStyle } from '../ItemDetail/ItemDetailStyle';
 import { makeStyles } from '@material-ui/core';
 import { ItemCount } from '../ItemCount/ItemCount';
@@ -9,6 +9,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../../../../Context/CartContext';
 
 const useStyles = makeStyles((theme) => ItemDetailStyle(theme));
 
@@ -17,6 +18,7 @@ export const ItemDetail = ({ item }) => {
     const classes = useStyles();
     const [compra,setCompra] = useState();
     const [carrito,setCarrito] = useState(true);
+    const {addItem} = useContext(CartContext)
 
     const onAdd = (quantityToAdd) => {
         setCompra(quantityToAdd)
@@ -61,7 +63,7 @@ export const ItemDetail = ({ item }) => {
                     </> :
                     <>
                     <Link to='/cart'>
-                        <button>Finalizar compra</button>
+                        <button onClick={e => addItem(item,)}>Finalizar compra</button>
                     </Link>
                     <button onClick={e => setCarrito(true)}>Cancelar compra</button>
                     </>

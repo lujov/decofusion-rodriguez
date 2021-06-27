@@ -13,7 +13,7 @@ export const PromosList = ({ promos }) => {
         <h1>PROMOCIONES</h1>
         <div>
             {promos.map((promo,i) =>
-                <Link to={`/Promos/${promo.id}`}>
+                <Link to={`/Promos/${promo.id}`} key={i}>
                     <Promos
                         key={i}
                         promo={promo}

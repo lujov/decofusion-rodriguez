@@ -7,6 +7,7 @@ export const ItemListStyle = theme => {
             rowGap: '6%',
             justifyContent:'center',
             marginTop:'3%',
+            width:'100%',
             '@media (max-width:839px)' : {
                 gridTemplateColumns: '40% 40%',
                 rowGap: '2%',

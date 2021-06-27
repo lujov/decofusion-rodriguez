@@ -26,6 +26,7 @@ export const NavBarStyle = theme => {
                 alignItems:'flex-start',
                 justifyContent:'space-between',
                 width:'40%',
+                // height: '83px'
             },
             '& > div > ul':{
                 display:'flex',
@@ -96,8 +97,7 @@ export const NavBarStyle = theme => {
         },
         btn: {
             color:'var(--color-primary)', 
-            cursor:'pointer'
-
+            cursor:'pointer',
         },
         subMenu:{
             '& ul':{
@@ -111,11 +111,16 @@ export const NavBarStyle = theme => {
                 '& li:hover':{
                     color:'#e1e5ea',
                     cursor:'pointer',
-                }
+                },
             },
             '&:hover > ul':{
                 height:'130px',
                 opacity:1,
-            }
-    }})
+            },
+        },
+        btnMobile:{
+            height: '20px'
+        }
+        
+    })
 }

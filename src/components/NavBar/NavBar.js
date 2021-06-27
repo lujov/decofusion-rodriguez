@@ -5,47 +5,43 @@ import { makeStyles } from '@material-ui/core';
 import {Search} from '@material-ui/icons';
 import {CardWidgets} from '../NavBar/CardWidgets/CardWidgets';
 import { Link } from 'react-router-dom';
+import { BotonMobile } from './BotonMobile/BotonMobile';
 
 const useStyles = makeStyles((theme) => NavBarStyle(theme));
 
 export const NavBar = () => {
     const classes = useStyles();
 
-    return <>
-        <section className="body">
-            <nav className={classes.container}>
-                <div>
-                    <Link className={classes.linkImg} to={'/'}><img src= {logo2} alt="logo"></img></Link>
-                    <button type="button">
-                        <i className="fas fa-bars"></i>
-                    </button>
+    return  <nav className={classes.container}>
+        <div>
+            <Link className={classes.linkImg} to={'/'}><img src= {logo2} alt="logo"></img></Link>
+            <div className={classes.btnMobile}><BotonMobile/></div>
+            <ul>
+                <li>
+                    <Link to={'/'}>HOME</Link>
+                </li>
+                <li className={classes.subMenu}>
+                    <Link to={'/productos'}>PRODUCTOS</Link>
                     <ul>
-                        <li>
-                            <a href="/#"><Link to={'/'}>HOME</Link></a>
-                        </li>
-                        <li className={classes.subMenu}>
-                            <a href="/#"><Link to={'/productos'}>PRODUCTOS</Link></a>
-                            <ul>
-                                <li><Link to={'/category/1'}>Bazar</Link></li>
-                                <li><Link to={'/category/2'}>Oficina</Link></li>
-                                <li><Link to={'/category/3'}>Jardin</Link></li>
-                                <li><Link to={'/category/4'}>Textil</Link></li>
-                            </ul>
-                        </li>
-                        <li>
-                        <a href="/#">CONTACTO</a>
-                        </li>
+                        <li><Link to={'/category/1'}>Bazar</Link></li>
+                        <li><Link to={'/category/2'}>Oficina</Link></li>
+                        <li><Link to={'/category/3'}>Jardin</Link></li>
+                        <li><Link to={'/category/4'}>Textil</Link></li>
                     </ul>
-                </div>
-                <form>
-                    <input type="search" placeholder="Search"></input>
-                    <button type="submit"><Search className={classes.btn}/></button>
-                    <CardWidgets/>
-                </form>
-            </nav>
-        </section>
-    </>;     
-    
+                </li>
+                <li>
+                    <a href="/#">CONTACTO</a>
+                </li>
+            </ul>
+        </div>
+        <form>
+            <input type="search" placeholder="Search"></input>
+            <button type="submit"><Search className={classes.btn}/></button>
+            <Link to={'/cart'}><CardWidgets/></Link>
+        </form>
+    </nav>;    
+
+       
   }
 
   

@@ -1,0 +1,58 @@
+.contenedor{
+    width: 200px;
+    height: 200px;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transform: scale(.2);
+    
+}
+
+.hamburguesa{
+    height: 8%;
+    background-color: black;
+}
+
+.hamburguesa::after, 
+.hamburguesa::before,
+.hamburguesa{
+    position: absolute;
+    width: 100%;
+    content: '';
+    background-color: black;
+    transition: 1s;
+}
+
+.hamburguesa::after{
+    height: 100%;
+    top: 50px;
+}
+
+.hamburguesa::before{
+    height: 100%;
+    top: -50px;
+}
+
+.cruz{
+    transition: 1s;
+    transform: rotateZ(45deg);
+}
+
+.cruz::before{
+    transition: 1s;
+    top: 0px;
+    transform: rotateZ(90deg);
+}
+
+.cruz::after{
+    transition: 1s;
+    top: 0px;
+    transform: rotateZ(0deg);
+}
+
+@media (max-width:800px){
+    .contenedor{
+        display: flex;
+    }
+}

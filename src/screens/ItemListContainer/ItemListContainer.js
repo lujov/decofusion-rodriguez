@@ -113,8 +113,7 @@ export const ItemListContainer = ({ greeting }) => {
 
     return <section className={classes.container}>
         <h1>Productos</h1>
-        { productos.length !==0 && <ItemList items={filterCatId(productos)}/> }
-        { catId === undefined && <ItemList items={productos}/> }
+        { catId === undefined ? <ItemList items={productos}/> : <ItemList items={filterCatId(productos)}/>  }
         {
             loader && 
                 <Loader
