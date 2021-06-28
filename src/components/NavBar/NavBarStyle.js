@@ -119,7 +119,7 @@ export const NavBarStyle = theme => {
             },
         },
         btnMobile:{
-            height: '20px'
+            // height: '20px'
         }
         
     })
