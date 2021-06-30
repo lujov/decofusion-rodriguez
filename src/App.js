@@ -4,6 +4,7 @@ import './App.css';
 import { Router } from './router/Router';
 import { AppStyle } from './AppStyle';
 import { makeStyles } from '@material-ui/core';
+import { CartComponentContext } from './Context/CartContext';
 
 const useStyles = makeStyles((theme) => AppStyle(theme));
 
@@ -11,7 +12,9 @@ const App = () => {
   const classes = useStyles();
 
   return <section className={classes.container}>
-    <Router/>
+    <CartComponentContext>
+      <Router/>
+    </CartComponentContext>
   </section>;     
   
 }

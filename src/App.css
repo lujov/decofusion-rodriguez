@@ -55,8 +55,8 @@ a:link, a:visited, a:active {
 
 .dropdown-menu{
   background-color: var(--color-primary);
-  background-color:#e7eaee ;
-  
+  background-color:#dee0e2 ;
+  /* background-color:#be818d */
 }
 
 .dropdown-menu li a{

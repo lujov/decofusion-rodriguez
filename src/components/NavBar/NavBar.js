@@ -15,7 +15,7 @@ export const NavBar = () => {
     return  <nav className={classes.container}>
         <div>
             <Link className={classes.linkImg} to={'/'}><img src= {logo2} alt="logo"></img></Link>
-            <div className={classes.btnMobile}><BotonMobile/></div>
+            <BotonMobile/>
             <ul>
                 <li>
                     <Link to={'/'}>HOME</Link>

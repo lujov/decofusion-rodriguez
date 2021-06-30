@@ -1,16 +1,17 @@
 .contenedor{
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     display: none;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     transform: scale(.2);
+    /* padding-bottom: 20px, */
     
 }
 
 .hamburguesa{
-    height: 8%;
+    height: 10%;
     background-color: black;
 }
 

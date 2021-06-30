@@ -5,11 +5,12 @@ export const NavBarStyle = theme => {
             backgroundColor: 'var(--color-secondary)',
             fontSize: '1.5rem',
             color: 'var(--color-primary)',
-            height: 'fit-content',
+            // height: 'fit-content',
             display: 'flex',
             alignItems:'flex-start',
             justifyContent:'space-between',
             padding: '0 1%',
+            boxSizing: 'border-box',
             '& > div > button': {
                 display:'none',
                 backgroundColor: 'var(--color-terceary)',
@@ -119,7 +120,8 @@ export const NavBarStyle = theme => {
             },
         },
         btnMobile:{
-            // height: '20px'
+            height: '60px',
+            boxSizing: 'border-box',
         }
         
     })

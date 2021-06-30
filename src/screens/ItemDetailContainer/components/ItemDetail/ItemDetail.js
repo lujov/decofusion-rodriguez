@@ -63,7 +63,7 @@ export const ItemDetail = ({ item }) => {
                     </> :
                     <>
                     <Link to='/cart'>
-                        <button onClick={e => addItem(item,)}>Finalizar compra</button>
+                        <button onClick={e => addItem(item,compra)}>Finalizar compra</button>
                     </Link>
                     <button onClick={e => setCarrito(true)}>Cancelar compra</button>
                     </>

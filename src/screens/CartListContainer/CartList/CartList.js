@@ -1,15 +1,18 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import { makeStyles } from '@material-ui/core';
-import { CartListStyle } from '../CartList/CartListStyle'
+import { CartListStyle } from '../CartList/CartListStyle';
+import { CartContext } from '../../../Context/CartContext';
+import { Cart } from '../Cart/Cart';
 
 const useStyles = makeStyles((theme) => CartListStyle(theme));
 
 export const CartList = () => {
     const classes = useStyles();
+    const { cart } = useContext(CartContext);
 
     return<div className={classes.container}>
         <div>
-            <h2>TUS PRODUCTOS</h2>
+            <h2>TU CARRITO</h2>
         </div>
         <table>
             <thead>
@@ -21,23 +24,17 @@ export const CartList = () => {
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    {/* {{!-- <td class="img-carrito-container"><img class="img-prod-carrito" src="imagenes/producto.jpg" alt=""></td> --}} */}
-                    <td><p>Nombre</p></td>
-                    <td>
-                        <div>
-                            <form>
-                                <input type="number" id="cantidad" name="cantidad"></input>
-                                <button>Actualizar cantidad</button>
-                            </form>
-                        </div>
-                    </td>
-                    <td class="carrito-precio-container">
-                        <span class="carrito-precio">precio</span>
-                        <input type="text" name="precio"></input>
-                        <a href="" class="btn btn-danger">Eliminar producto</a>
-                    </td>
-                </tr>
+                {
+                    cart.length===0 ?
+                    <>
+                    <h2>No hay productos en el carrito</h2>
+                    <Cart item={undefined} />
+                    </>
+                    :
+                    cart.map((item,i) => 
+                        <Cart key={i} item={item} />
+                    )
+                }
             </tbody>
         </table>
     </div>
