@@ -4,7 +4,7 @@ import { ItemListContainerStyle } from '../ItemListContainer/ItemListContainerSt
 import { ItemList } from '../ItemListContainer/components/ItemList/ItemList';
 import Loader from 'react-loader-spinner';
 import { useParams } from 'react-router-dom';
-import { dataBase} from '../../firebase/fireBase';
+// import { dataBase} from '../../firebase/fireBase';
 
 const useStyles = makeStyles((theme) => ItemListContainerStyle(theme));
 
@@ -18,7 +18,7 @@ const items = () => {
                     pictureUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRan69EmUJlVSTDUtFL4Z_kSF2DRmGXBX2WEQ&usqp=CAU",
                     title: "ALMOHADON TERRA",
                     description: "Almohadon de pana y algodon. En varios colores de paleta tono tierra. Con cierre invisible",
-                    price: "$975",
+                    price: "975",
                     color: ["rosa","amarillo","terracota"]
                 },
                 {
@@ -27,7 +27,7 @@ const items = () => {
                     pictureUrl: "https://www.hogarmasmil.com/13054-home_default/jarron-blancoazul-ceramica-19x19x35.jpg",
                     title: "JARRON VINTAGE",
                     description: "Jarron blanco y azul desgastado. Hecho a mano y cocinado en horno de barro",
-                    price: "$1200",
+                    price: "1200",
                     color: ["rosa","amarillo","terracota"]
                 },
                 {
@@ -36,7 +36,7 @@ const items = () => {
                     pictureUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRan69EmUJlVSTDUtFL4Z_kSF2DRmGXBX2WEQ&usqp=CAU",
                     title: "ALMOHADON TERRA",
                     description: "Almohadon de pana y algodon. En varios colores de paleta tono tierra. Con cierre invisible",
-                    price: "$975",
+                    price: "975",
                     color: ["rosa","amarillo","terracota"]
                 },
                 {
@@ -45,7 +45,7 @@ const items = () => {
                     pictureUrl: "https://www.hogarmasmil.com/13054-home_default/jarron-blancoazul-ceramica-19x19x35.jpg",
                     title: "JARRON VINTAGE",
                     description: "Jarron blanco y azul desgastado. Hecho a mano y cocinado en horno de barro",
-                    price: "$1200",
+                    price: "1200",
                     color: ["rosa","amarillo","terracota"]
                 },
                 {
@@ -54,7 +54,7 @@ const items = () => {
                     pictureUrl: "http://d3ugyf2ht6aenh.cloudfront.net/stores/085/512/products/maceta-12x12cm-crespo-blanca1-f995581abdd600ce9316083088183848-640-0.jpg",
                     title: "MACETA TERRAZO",
                     description: "JMaceta de terrazo. 5 lts de capadidad, 20 cm de diametro y 23 cm de altura",
-                    price: "$1200",
+                    price: "1200",
                     color: ["rosa","amarillo","terracota"]
                 },
                 {
@@ -63,7 +63,7 @@ const items = () => {
                     pictureUrl: "https://plusmarket.com.ar/wp-content/uploads/2020/08/517UpBwQanL._AC_SL1000_.jpg",
                     title: "CUBIERTOS DE SUSHI",
                     description: "Set x 12. Cubiertos dorados con mango blanco de acero inoxidable. 3 Tenedores + 3 Cuchillos + 3 Cucharas Soperas + 3 Cucharas de té.",
-                    price: "$12.500",
+                    price: "12.500",
                     color: ["rosa","amarillo","terracota"]
                 },
                 {
@@ -72,7 +72,7 @@ const items = () => {
                     pictureUrl: "http://d3ugyf2ht6aenh.cloudfront.net/stores/085/512/products/maceta-12x12cm-crespo-blanca1-f995581abdd600ce9316083088183848-640-0.jpg",
                     title: "MACETA TERRAZO",
                     description: "JMaceta de terrazo. 5 lts de capadidad, 20 cm de diametro y 23 cm de altura",
-                    price: "$1200",
+                    price: "1200",
                     color: ["rosa","amarillo","terracota"]
                 },
                 {
@@ -81,7 +81,7 @@ const items = () => {
                     pictureUrl: "https://plusmarket.com.ar/wp-content/uploads/2020/08/517UpBwQanL._AC_SL1000_.jpg",
                     title: "CUBIERTOS DE SUSHI",
                     description: "Set x 12. Cubiertos dorados con mango blanco de acero inoxidable. 3 Tenedores + 3 Cuchillos + 3 Cucharas Soperas + 3 Cucharas de té.",
-                    price: "$12.500",
+                    price: "12.500",
                     color: ["rosa","amarillo","terracota"]
                 }
             ]

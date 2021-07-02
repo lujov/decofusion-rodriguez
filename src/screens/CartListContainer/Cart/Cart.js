@@ -9,19 +9,22 @@ export const Cart = ({ item }) => {
     const classes = useStyles();
     const { removeItem } = useContext(CartContext);
  
-    return <div className={classes.container}>
-    {item!==undefined &&
-    <tr>
-        <td><img src={item.item[0].pictureUrl} alt={item.item[0].title}/></td>
-        <td><p>{item.item[0].title}</p></td>
-        <td><p>{item.quantity}</p></td>
-        <td className={classes.precioContainer}>
-            <span>Precio</span>
-            <p>{item.item[0].price}</p>
-            <button onClick={e => removeItem(item.item[0].id)}>Eliminar producto</button>
-        </td>
-    </tr>
-    }
+    return <div className={classes.containerCart}>
+        {item!==undefined &&
+            <tr>
+                <div className={classes.infoItemContainer}>
+                    <td><img src={item.item[0].pictureUrl} alt={item.item[0].title}/></td>
+                    <td><p>{item.item[0].title}</p></td>
+                    <td><p>{item.quantity}</p></td>
+                </div>
+                <div className={classes.divisor}></div>
+                <td className={classes.precioContainer}>
+                    <span>Precio</span>
+                    <p>${item.item[0].price}</p>
+                    <button onClick={e => removeItem(item.item[0].id)}>Eliminar producto</button>
+                </td>
+            </tr>
+         }
     </div>
 
 }

@@ -2,57 +2,26 @@ export const CartListStyle = theme => {
     return({
         container:{
             marginTop:'50px',
-            '& h2':{
-                fontFamily:"'Alegreya Sans', sans-serif"
-            },
-            '& div':{
+            '& article':{
                 textAlign: 'center',
                 padding: '5px 0px 5px 0px',
-                backgroundColor: 'var(--color-secondary)',
+                border: 'solid 2px var(--color-secondary)',
+                backgroundColor:'#e1e5ea',
                 color: 'rgb(95, 94, 94)',
+                marginTop:'6PX',
+                '& h2':{
+                    fontFamily:"'Alegreya Sans', sans-serif"
+                },
             },
             '& table':{
                 boxSizing: 'border-box',
                 width: '100%',
                 height: 'auto',
                 color: 'rgb(95, 94, 94)',
-                '& thead':{
-                    border: 'solid 2px var(--color-secondary)',
-                    backgroundColor:'#e1e5ea',
-                    '& tr > th':{
-                        border: 'solid 2px var(--color-secondary)',
-                        // fontFamily: "'Maitree', serif",
-                        fontFamily:"'Alegreya Sans', sans-serif",
-                        fontSize: '1.1rem',
-                    }
-                },
+                marginTop: '2%',
                 '& tbody':{
-                    '& tr > td':{
-                        height:'100%',
-                        fontFamily: "'Didact Gothic', sans-serif",
-                        '& div':{
-                            backgroundColor:'var(--color-primary)',
-                            height:'80%',
-                            '& form':{
-                                display: 'flex',
-                                '& input':{
-                                    marginRight:'4%',
-                                },
-                                '& button':{
-                                    fontSize:'0.9rem',
-                                    whiteSpace:'normal',
-                                    width: '100%',
-                                    borderRadius:'6px',
-                                    backgroundColor:'#93aab8',
-                                    border: '#93aab8',
-                                    height:'30px',
-                                    color:'var(--color-primary)',
-                                    opacity:'0.7'
-                                }
-                            },
-                       },
-                    },
-                }
+                    backgroundColor:'var(--color-primary)'
+                },
             } 
         },
         precioContainer:{
@@ -83,5 +52,21 @@ export const CartListStyle = theme => {
             }
 
         },
+        divisor:{
+            borderBottom:'solid 3px #dda4ae',
+            marginTop:'4%',
+        },
+        btn:{
+            width:'10%',
+            height:'30px',
+            fontSize:'1.1rem',
+            whiteSpace:'normal',
+            backgroundColor:'#be818d',
+            border: '#be818d',
+            borderRadius:'6px',
+            color:'var(--color-primary)',
+            opacity:'0.7',
+            marginRight:'1%'
+        }
     })
 }

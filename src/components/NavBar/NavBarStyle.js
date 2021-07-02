@@ -57,15 +57,11 @@ export const NavBarStyle = theme => {
                 gap:'3%',
                 width:'30%',
                 marginTop:'22px',
-                '& button': {
-                    backgroundColor: 'var(--color-secondary)',
-                    border:'none'
-                },
                 '& input': {
                     border:'none',
                     borderRadius: '5px',
                     padding:'1%',
-                }
+                },
             },
             '@media (max-width:800px)': {
                 '& > div': {
@@ -85,9 +81,16 @@ export const NavBarStyle = theme => {
                 '& > form > input' :{
                    display:'none'
                 }
+            }, 
+        },
+        widgetsContainer:{
+            display:'flex',
+            width:'20%',
+            '& button': {
+                backgroundColor: 'var(--color-secondary)',
+                border:'none',
+                height:'100%'
             },
-            
-            
         },
         linkImg:{
             '& img':{

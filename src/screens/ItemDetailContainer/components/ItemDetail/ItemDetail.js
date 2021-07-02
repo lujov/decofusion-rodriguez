@@ -48,7 +48,7 @@ export const ItemDetail = ({ item }) => {
                 </FormControl>
             }
             <br></br>
-                <span>{item[0].price}</span>
+                <span>${item[0].price}</span>
                 <div className={classes.iconContainer}>
                     <CreditCard className={classes.icon}/><h4>6 cuotas sin interés</h4>
                 </div>

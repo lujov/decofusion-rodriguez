@@ -36,8 +36,10 @@ export const NavBar = () => {
         </div>
         <form>
             <input type="search" placeholder="Search"></input>
-            <button type="submit"><Search className={classes.btn}/></button>
-            <Link to={'/cart'}><CardWidgets/></Link>
+            <div className={classes.widgetsContainer}>
+                <button type="submit"><Search className={classes.btn}/></button>
+                <Link to={'/cart'}><CardWidgets/></Link>
+            </div>
         </form>
     </nav>;    
 
