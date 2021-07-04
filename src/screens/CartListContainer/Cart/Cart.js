@@ -13,15 +13,15 @@ export const Cart = ({ item }) => {
         {item!==undefined &&
             <tr>
                 <div className={classes.infoItemContainer}>
-                    <td><img src={item.item[0].pictureUrl} alt={item.item[0].title}/></td>
-                    <td><p>{item.item[0].title}</p></td>
+                    <td><img src={item.item.pictureUrl} alt={item.item.title}/></td>
+                    <td><p>{item.item.title}</p></td>
                     <td><p>{item.quantity}</p></td>
                 </div>
                 <div className={classes.divisor}></div>
                 <td className={classes.precioContainer}>
                     <span>Precio</span>
-                    <p>${item.item[0].price}</p>
-                    <button onClick={e => removeItem(item.item[0].id)}>Eliminar producto</button>
+                    <p>${item.item.price}</p>
+                    <button onClick={e => removeItem(item.item.id)}>Eliminar producto</button>
                 </td>
             </tr>
          }

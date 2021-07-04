@@ -13,7 +13,7 @@ export const CartList = () => {
 
     let totalPrice = 0;
     cart.map((producto) =>
-        totalPrice = totalPrice + parseInt(producto.item[0].price)*producto.quantity
+        totalPrice = totalPrice + parseInt(producto.item.price)*producto.quantity
     )
 
     return<section className={classes.container}>
@@ -26,7 +26,7 @@ export const CartList = () => {
                     cart.length===0 ?
                     <>
                         <h2>No hay productos en el carrito</h2>
-                        <Link to="/">
+                        <Link to="/productos">
                             <button className={classes.btn}>Tienda</button>
                         </Link>
                         {/* <Cart item={undefined} /> */}

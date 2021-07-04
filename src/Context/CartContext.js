@@ -6,7 +6,7 @@ export const CartComponentContext = props => {
     const [cart,setCart] = useState([]);
 
     const addItem = (item,quantity) => {
-        const itemsInCart = cart.filter(producto => producto.item[0].id === item[0].id); 
+        const itemsInCart = cart.filter(producto => producto.item.id === item.id); 
 
         if (itemsInCart.length===0 && cart.length===0) {
             setCart([
@@ -24,14 +24,24 @@ export const CartComponentContext = props => {
                 }
             ])
         } else {
-            //se cambia la cantidad de ese producto que ya se encuentra en el carrito
+            
+            const notInCart = cart.filter(producto => producto.item.id !== item.id);
+            const alreadyInCart = cart.filter(producto => producto.item.id === item.id);
+
+            alreadyInCart[0].quantity = alreadyInCart[0].quantity + quantity;
+
+            setCart([
+                ...notInCart,
+                alreadyInCart[0]
+            ])
+
         }
 
     }
 
     const removeItem = (itemId) => {
-        const itemsNotRemove = cart.filter(producto => producto.item[0].id !== itemId);
-        setCart([itemsNotRemove]);
+        const itemsNotRemove = cart.filter(producto => producto.item.id !== itemId);
+        setCart(itemsNotRemove);
     }
 
     const clear = () => {

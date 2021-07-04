@@ -123,8 +123,10 @@ export const NavBarStyle = theme => {
             },
         },
         btnMobile:{
-            height: '60px',
+            height: '82px',
             boxSizing: 'border-box',
+            position: 'absolute',
+            left: '150px'
         }
         
     })

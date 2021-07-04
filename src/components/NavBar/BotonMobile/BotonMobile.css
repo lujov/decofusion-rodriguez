@@ -1,18 +1,28 @@
+:root {
+    --color-primary: #faf3f3;
+    --color-secondary: #a7bbc7;
+    --color-terciary: #da7f8f;
+    /* 4to color #e1e5ea */
+  }
+
 .contenedor{
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
     display: none;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     transform: scale(.2);
-    /* padding-bottom: 20px, */
-    
+    box-sizing: border-box;
+    border-radius: 4px;
+    position: relative;
+    bottom: 24px;
+    right:18px
 }
 
 .hamburguesa{
-    height: 10%;
-    background-color: black;
+    height: 8%;
+    background-color: var(--color-primary);
 }
 
 .hamburguesa::after, 
@@ -21,18 +31,18 @@
     position: absolute;
     width: 100%;
     content: '';
-    background-color: black;
+    background-color: var(--color-primary);
     transition: 1s;
 }
 
 .hamburguesa::after{
     height: 100%;
-    top: 50px;
+    top: 40px;
 }
 
 .hamburguesa::before{
     height: 100%;
-    top: -50px;
+    top: -40px;
 }
 
 .cruz{

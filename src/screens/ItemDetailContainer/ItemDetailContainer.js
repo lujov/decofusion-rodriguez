@@ -62,7 +62,7 @@ const getItems = () => {
                         pictureUrl: "https://plusmarket.com.ar/wp-content/uploads/2020/08/517UpBwQanL._AC_SL1000_.jpg",
                         title: "CUBIERTOS DE SUSHI",
                         description: "Set x 12. Cubiertos dorados con mango blanco de acero inoxidable. 3 Tenedores + 3 Cuchillos + 3 Cucharas Soperas + 3 Cucharas de té.",
-                        price: "12.500",
+                        price: "12500",
                         color: ["rosa","amarillo","terracota"]
                     },
                     {
@@ -80,7 +80,7 @@ const getItems = () => {
                         pictureUrl: "https://plusmarket.com.ar/wp-content/uploads/2020/08/517UpBwQanL._AC_SL1000_.jpg",
                         title: "CUBIERTOS DE SUSHI",
                         description: "Set x 12. Cubiertos dorados con mango blanco de acero inoxidable. 3 Tenedores + 3 Cuchillos + 3 Cucharas Soperas + 3 Cucharas de té.",
-                        price: "12.500",
+                        price: "12500",
                         color: ["rosa","amarillo","terracota"]
                     }
                 ]
