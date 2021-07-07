@@ -59,11 +59,11 @@ export const ItemDetail = ({ item }) => {
                     {carrito ?
                     <>
                     <ItemCount onAdd={onAdd} stock='7' initial='0'/>
-                    <button onClick={e => setCarrito(false)}>Agregar</button>
+                    <button onClick={e => setCarrito(false) && addItem(item[0],compra)}>Agregar</button>
                     </> :
                     <>
                     <Link to='/cart'>
-                        <button onClick={e => addItem(item[0],compra)}>Finalizar compra</button>
+                        <button>Finalizar compra</button>
                     </Link>
                     <button onClick={e => setCarrito(true)}>Cancelar compra</button>
                     </>

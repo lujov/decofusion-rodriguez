@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => CartListStyle(theme));
 
 export const CartList = () => {
     const classes = useStyles();
-    const { cart } = useContext(CartContext);
+    const { cart,clear } = useContext(CartContext);
 
     let totalPrice = 0;
     cart.map((producto) =>
@@ -38,6 +38,7 @@ export const CartList = () => {
                     )}
                     <div className={classes.divisor}></div>
                     <h2>${totalPrice}</h2>
+                    <button className={classes.btnClear} onClick={e => clear()}>Limpiar carrito</button>
                     </>
                 }
             </tbody>

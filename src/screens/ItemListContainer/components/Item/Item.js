@@ -10,7 +10,7 @@ export const Item = ({ item }) => {
     return <article className={classes.container}>
         <img src={item.pictureUrl} alt="Producto"></img>
         <h3>{item.title}</h3>
-        <p>{item.description}</p>
+        {/* <p>{item.description}</p> */}
         <span>${item.price}</span>
 
     </article>;

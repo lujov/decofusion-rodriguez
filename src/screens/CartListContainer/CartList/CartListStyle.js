@@ -20,7 +20,7 @@ export const CartListStyle = theme => {
                 color: 'rgb(95, 94, 94)',
                 marginTop: '2%',
                 '& tbody':{
-                    backgroundColor:'var(--color-primary)'
+                    backgroundColor:'var(--color-primary)',
                 },
             } 
         },
@@ -67,6 +67,17 @@ export const CartListStyle = theme => {
             color:'var(--color-primary)',
             opacity:'0.7',
             marginRight:'1%'
+        },
+        btnClear:{
+            width:'fit-content',
+            height:'30px',
+            fontSize:'0.9rem',
+            whiteSpace:'normal',
+            backgroundColor:'#be818d',
+            border: '#be818d',
+            borderRadius:'6px',
+            color:'var(--color-primary)',
+            opacity:'0.7'
         }
     })
 }
