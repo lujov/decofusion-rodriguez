@@ -26,21 +26,21 @@ export const ItemDetail = ({ item }) => {
 
     return <article className={classes.container}>
             <div className={classes.imgContainer}>
-                <img src={item[0].pictureUrl} alt="Producto"></img>
+                <img src={item.pictureUrl} alt="Producto"></img>
             </div>
             <div className={classes.infoContainer}>
-                <h3>{item[0].title}</h3>
-                <p>{item[0].description}</p>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
             {carrito &&    
                 <FormControl className={classes.formControl}>
                     <InputLabel id="demo-simple-select-label">Color</InputLabel>
                     <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
-                    value={item[0].color}
+                    value={item.color}
                     >
                         {
-                            item[0].color.map((color,i) =>
+                            item.color.map((color,i) =>
                                 <MenuItem value={color} key={i}>{color}</MenuItem>
                             )
                         }
@@ -48,7 +48,7 @@ export const ItemDetail = ({ item }) => {
                 </FormControl>
             }
             <br></br>
-                <span>${item[0].price}</span>
+                <span>${item.price}</span>
                 <div className={classes.iconContainer}>
                     <CreditCard className={classes.icon}/><h4>6 cuotas sin interés</h4>
                 </div>
@@ -59,7 +59,7 @@ export const ItemDetail = ({ item }) => {
                     {carrito ?
                     <>
                     <ItemCount onAdd={onAdd} stock='7' initial='0'/>
-                    <button onClick={e => setCarrito(false) && addItem(item[0],compra)}>Agregar</button>
+                    <button onClick={e => setCarrito(false) & addItem(item,compra)}>Agregar</button>
                     </> :
                     <>
                     <Link to='/cart'>

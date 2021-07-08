@@ -116,10 +116,10 @@ export const ItemDetailContainer = () => {
         
     },[id]);
 
-    const filterId = productoSeleccionado => productoSeleccionado.filter(producto => producto.id === id);
+    // const filterId = productoSeleccionado => productoSeleccionado.filter(producto => producto.id === id);
         
     return <section className={classes.container}>
-        {productoSeleccionado.length !==0 && <ItemDetail item={filterId(productoSeleccionado)}/>}
+        {productoSeleccionado.length !==0 && <ItemDetail item={productoSeleccionado}/>}
         {
             loader && 
                 <Loader

@@ -106,7 +106,7 @@ export const ItemListContainer = ({ greeting }) => {
             if(querySnapshot.size === 0) {
                 console.log('No results!')
             }
-            setProductos(querySnapshot.docs.map(doc => doc.data()));
+            setProductos(querySnapshot.docs.map(doc=> ({id: doc.id, ...doc.data()})))
         }).catch((error) => {
             console.log("Error searching items", error);
         }).finally(() => {
