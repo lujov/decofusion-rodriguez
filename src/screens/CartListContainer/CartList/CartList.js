@@ -1,4 +1,4 @@
-import React,{useContext} from 'react';
+import React,{useContext,useState} from 'react';
 import { makeStyles } from '@material-ui/core';
 import { CartListStyle } from '../CartList/CartListStyle';
 import { CartContext } from '../../../Context/CartContext';
@@ -7,9 +7,12 @@ import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => CartListStyle(theme));
 
-export const CartList = () => {
+export const CartList = ({ sendOrder }) => {
     const classes = useStyles();
     const { cart,clear } = useContext(CartContext);
+    const [name,setName] = useState();
+    const [phone,setPhone] = useState();
+    const [email,setEmail] = useState();
 
     let totalPrice = 0;
     cart.map((producto) =>
@@ -39,6 +42,12 @@ export const CartList = () => {
                     <div className={classes.divisor}></div>
                     <h2>${totalPrice}</h2>
                     <button className={classes.btnClear} onClick={e => clear()}>Limpiar carrito</button>
+                    <input placeholder="Nombre" onChange={e => setName(e.target.value)}></input>
+                    <input placeholder="Telefono" onChange={e => setPhone(e.target.value)}></input>
+                    <input placeholder="Mail" onChange={e => setEmail(e.target.value)}></input>
+                    <button className={classes.btn} onClick={e => sendOrder(name,phone,email,cart,totalPrice)}>
+                        Enviar orden
+                    </button>
                     </>
                 }
             </tbody>
