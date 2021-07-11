@@ -5,13 +5,14 @@ export const CartContext = createContext();
 export const CartComponentContext = props => {
     const [cart,setCart] = useState([]);
 
-    const addItem = (item,quantity) => {
+    const addItem = (item,color,quantity) => {
         const itemsInCart = cart.filter(producto => producto.item.id === item.id); 
 
         if (itemsInCart.length===0 && cart.length===0) {
             setCart([
                 {
                 item: item,
+                color: color,
                 quantity: quantity
                 }
             ])
@@ -20,6 +21,7 @@ export const CartComponentContext = props => {
                 ...cart
                 ,{
                 item: item,
+                color: color,
                 quantity: quantity
                 }
             ])

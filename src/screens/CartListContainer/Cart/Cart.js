@@ -16,6 +16,7 @@ export const Cart = ({ item }) => {
                     <td><img src={item.item.pictureUrl} alt={item.item.title}/></td>
                     <td><p>{item.item.title}</p></td>
                     <td><p>{item.quantity}</p></td>
+                    <td><p>{item.color}</p></td>
                 </div>
                 <div className={classes.divisor}></div>
                 <td className={classes.precioContainer}>

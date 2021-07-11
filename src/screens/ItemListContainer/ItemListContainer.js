@@ -91,7 +91,7 @@ const useStyles = makeStyles((theme) => ItemListContainerStyle(theme));
     
 // }
 
-export const ItemListContainer = ({ greeting }) => {
+export const ItemListContainer = () => {
     const classes = useStyles();
 
     const { catId } = useParams();
@@ -102,7 +102,9 @@ export const ItemListContainer = ({ greeting }) => {
     useEffect(() => {
         SetLoader(true);
         const itemCollection = dataBase.collection("productos");
-        itemCollection.get().then((querySnapshot) => {
+        const categorySelected = catId === undefined ? itemCollection : itemCollection.where('catId','==',catId);
+
+        categorySelected.get().then((querySnapshot) => {
             if(querySnapshot.size === 0) {
                 console.log('No results!')
             }
@@ -113,30 +115,10 @@ export const ItemListContainer = ({ greeting }) => {
             SetLoader(false);
         });
 
-    },[]);
-
-    const filterCatId = productos => productos.filter(producto => producto.catId === catId);
-
-    // const filterById = (productos) => {
-    //     SetLoader(true);
-    //     const itemCollection = dataBase.collection("productos");
-    //     const categorySelected = itemCollection.where('catId','==',catId);
-        
-    //     categorySelected.get().then((doc) => {
-    //         if(doc.size === 0) {
-    //             console.log("No hay resultados para mostrar");
-    //         }
-    //         setProductos(doc.docs.map(doc => doc.data()));
-    //     }).catch((error) => {
-    //         console.log("Error en la carga de productos",error);
-    //     }).finally(() => {
-    //         SetLoader(false);
-    //     })
-    // };
+    },[catId]);
 
     return <section className={classes.container}>
         <h1>Productos</h1>
-        { catId === undefined ? <ItemList items={productos}/> : <ItemList items={filterCatId(productos)}/>  }
         {
             loader && 
                 <Loader
@@ -146,6 +128,7 @@ export const ItemListContainer = ({ greeting }) => {
                 width={100}
             />
         }
+        <ItemList items={productos}/>
     </section>;     
     
   }

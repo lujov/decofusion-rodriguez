@@ -19,6 +19,7 @@ export const ItemDetail = ({ item }) => {
     const [compra,setCompra] = useState();
     const [carrito,setCarrito] = useState(true);
     const {addItem} = useContext(CartContext)
+    const [color,setColor] = useState();
 
     const onAdd = (quantityToAdd) => {
         setCompra(quantityToAdd)
@@ -37,7 +38,10 @@ export const ItemDetail = ({ item }) => {
                     <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
-                    value={item.color}
+                    label="Color"
+                    SelectDisplayProps={item.color}
+                    onChange={e => setColor(e.target.value)}
+                    defaultValue = ""
                     >
                         {
                             item.color.map((color,i) =>
@@ -59,7 +63,7 @@ export const ItemDetail = ({ item }) => {
                     {carrito ?
                     <>
                     <ItemCount onAdd={onAdd} stock='7' initial='0'/>
-                    <button onClick={e => setCarrito(false) & addItem(item,compra)}>Agregar</button>
+                    <button onClick={e => setCarrito(false) & addItem(item,color,compra)}>Agregar</button>
                     </> :
                     <>
                     <Link to='/cart'>

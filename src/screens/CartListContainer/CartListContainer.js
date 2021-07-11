@@ -16,7 +16,7 @@ export const CartListContainer = () => {
     const sendOrder = (name,phone,email,cart,price) => {
 
         setLoader(true);
-        const orders = dataBase.collection('orders').doc();
+        const orders = dataBase.collection('orders');
         const newOrder = {
             buyer: {
                 name: name,
@@ -28,7 +28,10 @@ export const CartListContainer = () => {
             price: price
         };
     
-        orders.set(newOrder).then(console.log('Orden enviada'))
+        orders.add(newOrder).then(doc => 
+            alert(`Compra realizada con éxito. Tu id es: ${doc.id}`)
+        )
+
         .catch(err => {
             console.log(err);
         }).finally(() => {
