@@ -1,53 +1,28 @@
 export const CartStyle = theme => {
     return({
         containerCart:{
-            '& tr':{
+            borderTop:'solid 1px grey',
+            '& article':{
                 With: '100%',
                 height:'150px',
                 display:'flex',
                 justifyContent:'space-between',
                 alignItems:'center',
-                backgroundColor:'var(--color-primary)',
-                margin: '0 6px 6px 6px',
-                borderTop:'solid 1px grey',
-                '& td':{
-                    height:'150px',
-                    width:'30%',
-                    fontFamily: "'Didact Gothic', sans-serif",
-                    display:'flex',
-                    alignItems:'center',
-                    fontSize:'1.5rem',
-                    '& div':{
-                        backgroundColor:'var(--color-primary)',
-                        height:'80%',
-                        '& form':{
-                            display: 'flex',
-                            '& input':{
-                                marginRight:'4%',
-                            },
-                            '& button':{
-                                fontSize:'0.9rem',
-                                whiteSpace:'normal',
-                                width: '100%',
-                                borderRadius:'6px',
-                                backgroundColor:'#93aab8',
-                                border: '#93aab8',
-                                height:'30px',
-                                color:'var(--color-primary)',
-                                opacity:'0.7'
-                            }
-                        },
-                    },
-                },
+                backgroundColor:'#fcf9f9',
+                margin: '8px 6px 8px 6px',  
             },  
         },
         precioContainer:{
-            width:'25%',
+            width:'45%',
             height:'55.6px',
             display: 'flex',
             gap:'4%',
+            justifyContent:'space-between',
             alignItems:'center',
             marginTop: '12px',
+            fontFamily: "'Didact Gothic', sans-serif",
+            fontSize:'1.5rem',
+            backgroundColor:'#fcf9f9',
             '& span':{
                 marginLeft:'4px',
             },
@@ -58,30 +33,38 @@ export const CartStyle = theme => {
                 boxSizing:'border-box'
             },
             '& button':{
-                width:'60%',
-                height:'30px',
+                width:'fit-content',
+                height:'fit-content',
+                boxSizing:'border-box',
+                paddingTop:'6px',
                 fontSize:'0.9rem',
                 whiteSpace:'normal',
                 backgroundColor:'#be818d',
                 border: '#be818d',
                 borderRadius:'6px',
                 color:'var(--color-primary)',
-                opacity:'0.7'
-            }
+                opacity:'0.7',
+                '& :hover':{
+                    cursor:'pointer'
+                }
+            },
 
         },
         infoItemContainer:{
             display:'flex',
             flexDirection:'row',
             gap:'5%',
+            justifyContent:'space-between',
             width:'50%',
-            '& td':{
+            height:'150px',
+            fontFamily: "'Didact Gothic', sans-serif",
+            fontSize:'1.5rem',
+            alignItems:'center',
+            backgroundColor:'#fcf9f9',
+            '& img':{
                 height:'150px',
-                '& img':{
-                    height:'150px',
-                    width:'auto'
-                },
-            }
+                width:'auto'
+            },
         },
         divisor:{
             height:'90%',

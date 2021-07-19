@@ -5,6 +5,7 @@ export const HomeStyle = theme => {
            justifyContent:'center',
            height:'100vh',
            alignItems: 'center',
+           marginTop:'120px',
            '& > h1':{
                fontFamily:"'Alegreya Sans', sans-serif",
                fontSize: '2rem',

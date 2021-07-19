@@ -8,9 +8,11 @@ export const ItemListContainerStyle = theme => {
             padding: '2%',
             backgroundColor: 'var(--color-primary)',
             with:'100vw',
-            height:'100%',
+            height:'fit-content',
             color:'gray',
             boxSizing: 'border-box',
+            marginTop:'120px',
+            overflowY:'hidden',
             '& h1':{
                 margin: 0,
                 fontFamily:"'Alegreya Sans', sans-serif",

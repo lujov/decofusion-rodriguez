@@ -39,7 +39,6 @@ export const ItemDetail = ({ item }) => {
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
                     label="Color"
-                    SelectDisplayProps={item.color}
                     onChange={e => setColor(e.target.value)}
                     defaultValue = ""
                     >

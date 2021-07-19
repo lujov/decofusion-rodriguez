@@ -12,9 +12,8 @@ export const ItemList = ({ items }) => {
 
     return <section className={classes.container}>
         {items.map((producto,i) =>
-            <Link to={`/item/${producto.id}`}>
+            <Link to={`/item/${producto.id}`} key={i}>
                 <Item
-                    key={i}
                     item={producto}
                 />
             </Link>

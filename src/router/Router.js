@@ -5,6 +5,7 @@ import { ItemDetailContainer } from '../screens/ItemDetailContainer/ItemDetailCo
 import { ItemListContainer } from '../screens/ItemListContainer/ItemListContainer';
 import { Home } from '../screens/Home/Home';
 import { CartListContainer } from '../screens/CartListContainer/CartListContainer'
+import { Footer } from '../components/Footer/Footer';
 
 export const Router = () => {
     return <BrowserRouter>
@@ -26,5 +27,6 @@ export const Router = () => {
                     <CartListContainer/>
                 </Route>
             </Switch>
+            <Footer/>
         </BrowserRouter>
 }

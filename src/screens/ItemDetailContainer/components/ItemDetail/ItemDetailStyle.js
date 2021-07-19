@@ -4,6 +4,7 @@ export const ItemDetailStyle = theme => {
         container:{
             width:'fit-content',
             display:'flex',
+            justifyContent:'center',
             gap:'5%',
             boxSizing: "border-box",
             '& div >h4':{
@@ -54,7 +55,7 @@ export const ItemDetailStyle = theme => {
             }            
         },
         imgContainer:{
-            width:'60%',
+            width:'520px',
             '& img': {
                 width: "100%",
                 height: "auto"
