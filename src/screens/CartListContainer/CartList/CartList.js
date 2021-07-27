@@ -8,7 +8,7 @@ import { PersonalInfo } from '../PersonalInfo/PersonalInfo';
 
 const useStyles = makeStyles((theme) => CartListStyle(theme));
 
-export const CartList = ({ sendOrder }) => {
+export const CartList = ({ sendOrder,idCompra }) => {
     const classes = useStyles();
     const { cart,clear } = useContext(CartContext);
     const [openPersonalInfo,setOpenPersonalInfo] = useState(false);
@@ -33,10 +33,10 @@ export const CartList = ({ sendOrder }) => {
                 cart.length===0 ?
                 <>
                     <h2>No hay productos en el carrito</h2>
+                    {idCompra!==undefined && <h2>{idCompra}</h2>}
                     <Link to="/productos">
                         <button className={classes.btn}>Tienda</button>
                     </Link>
-                    {/* <Cart item={undefined} /> */}
                 </>
                 :
                 <>

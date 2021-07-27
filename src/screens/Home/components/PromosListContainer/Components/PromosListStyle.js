@@ -5,6 +5,8 @@ export const PromosListStyle = theme => {
             display: 'flex',
             flexDirection:'column',
             alignItems:'center',
+            height:'100%',
+            width:'100%',
             '& div':{
                display:'flex',
                fontFamily: "'Maitree', serif",
@@ -13,24 +15,29 @@ export const PromosListStyle = theme => {
                justifyContent: 'center',
                width:'95%',
                marginLeftt: '5px',
+               '@media (max-width:550px)' : {
+                  flexWrap:'wrap'
+              },
                '& h2':{
                   textAlign:'center'
                }
             },
-            '& h1':{
-               color:'var(--color-secondary)',
-               backgroundColor:'#e1e5ea',
-               marginRight:0,
-               marginLeft:0,
-               width:'95%',
-               textAlign:'center',
-               fontSize: '2rem',
-               padding: '2% 0',
-               fontFamily:"'Alegreya Sans', sans-serif",
-               border: 'solid 2px  #a7bbc7',
-               borderRadius: '15px',
-            }
        },
+       itemTitle:{
+         textAlign: 'center',
+         border: 'solid 2px var(--color-secondary)',
+         backgroundColor:'#e1e5ea',
+         color: 'var(--color-secondary)',
+         width:'100%',
+         margin:'0 auto 2% auto',
+         borderRadius: '15px',
+         padding:'1.5%',
+         '& h1':{
+             fontFamily:"'Alegreya Sans', sans-serif",
+             fontSize: '2rem',
+             margin: 0,
+         }
+     } 
        
 
     })}

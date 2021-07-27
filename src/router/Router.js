@@ -6,6 +6,7 @@ import { ItemListContainer } from '../screens/ItemListContainer/ItemListContaine
 import { Home } from '../screens/Home/Home';
 import { CartListContainer } from '../screens/CartListContainer/CartListContainer'
 import { Footer } from '../components/Footer/Footer';
+import { ItemComboContainer } from '../screens/ItemComboContainer/ItemComboContainer';
 
 export const Router = () => {
     return <BrowserRouter>
@@ -20,8 +21,11 @@ export const Router = () => {
                 <Route path="/item/:id">
                     <ItemDetailContainer />
                 </Route>
-                <Route path="/category/:catId">
+                <Route path="/category/:catId" >
                     <ItemListContainer/>
+                </Route>
+                <Route path="/combo/:comboId">
+                    <ItemComboContainer/>
                 </Route>
                 <Route path="/cart">
                     <CartListContainer/>

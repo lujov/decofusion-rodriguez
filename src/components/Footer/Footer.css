@@ -1,0 +1,27 @@
+:root {
+    --color-primary: #faf3f3;
+    --color-secondary: #a7bbc7;
+    --color-terciary: #da7f8f;
+    /* 4to color #e1e5ea */
+  }
+
+  .fa-instagram {
+    font-size: 2rem;
+    margin-right: 1.5%;
+    color: var(--color-terciary);
+} 
+
+.fa-instagram:hover {
+  transform: scale(1.2);
+  color: var(--color-secondary);
+}
+
+.fa-facebook-square {
+    font-size: 2rem;
+    color: var(--color-terciary);
+}
+
+.fa-facebook-square:hover {
+  transform: scale(1.2);
+  color: var(--color-secondary);
+}

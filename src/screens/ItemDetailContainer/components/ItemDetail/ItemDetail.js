@@ -10,6 +10,7 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../../../Context/CartContext';
+import notFound from '../../images/notFound.svg';
 
 const useStyles = makeStyles((theme) => ItemDetailStyle(theme));
 
@@ -18,14 +19,26 @@ export const ItemDetail = ({ item }) => {
     const classes = useStyles();
     const [compra,setCompra] = useState();
     const [carrito,setCarrito] = useState(true);
-    const {addItem} = useContext(CartContext)
+    const {addItem} = useContext(CartContext);
     const [color,setColor] = useState();
 
     const onAdd = (quantityToAdd) => {
         setCompra(quantityToAdd)
     }
 
+    const upPage = () => {
+        window.scrollTo(0,0);
+    }
+
     return <article className={classes.container}>
+            
+            {
+                item.id===undefined ?
+                <div className={classes.notFoundContainer}>
+                    <h1>UPS! NO SE ENCONTRO EL PRODUCTO</h1>
+                    <img src={notFound} alt="Not found" />
+                </div> :
+                <>
             <div className={classes.imgContainer}>
                 <img src={item.pictureUrl} alt="Producto"></img>
             </div>
@@ -66,13 +79,16 @@ export const ItemDetail = ({ item }) => {
                     </> :
                     <>
                     <Link to='/cart'>
-                        <button>Finalizar compra</button>
+                        <button onClick={e => upPage()}>Finalizar compra</button>
                     </Link>
                     <button onClick={e => setCarrito(true)}>Cancelar compra</button>
                     </>
                     }
                 </div>
             </div>
+            </> 
+            }
+            
     </article>;
 
 }

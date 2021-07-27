@@ -8,11 +8,17 @@ export const NavBarStyle = theme => {
             padding: '0 1%',
             boxSizing: 'border-box',
             position:'fixed',
-            zIndex:100
+            zIndex:100,
+            overflowX:'hidden',
+            overflowY:'hidden',
         },
         widgetsContainer:{
             display:'flex',
-            width:'20%',
+            alignItems:'center',
+            justifyContent:'flex-end',
+            width:'30%',
+            height:'50px',
+            margin:'22px 30px 0 0',
             '& button': {
                 backgroundColor: 'var(--color-secondary)',
                 border:'none',
@@ -36,6 +42,8 @@ export const NavBarStyle = theme => {
                 height:0,
                 opacity:0,
                 transition:'all 1s ease',
+                display:'flex',
+                flexDirection:'column',
                 '& li':{
                     marginTop:'2px',
                 },
@@ -45,7 +53,28 @@ export const NavBarStyle = theme => {
                 },
             },
             '&:hover > ul':{
-                height:'130px',
+                height:'230px',
+                opacity:1,
+            },
+        },
+        subMenuMobile:{
+            '& ul':{
+                listStyle:'none',
+                height:0,
+                opacity:0,
+                transition:'all 1s ease',
+                display:'flex',
+                flexDirection:'column',
+                '& li':{
+                    marginTop:'2px',
+                },
+                '& li:hover':{
+                    color:'#e1e5ea',
+                    cursor:'pointer',
+                },
+            },
+            '&:hover > ul':{
+                height:'230px',
                 opacity:1,
             },
         },
@@ -70,25 +99,22 @@ export const NavBarStyle = theme => {
                     marginBottom: '4px',
                 }
             },
-            '& > div':{
-                display:'flex',
-                alignItems:'flex-start',
-                justifyContent:'space-between',
-                width:'40%',
-                // height: '83px'
-            },
             '& > div > ul':{
                 display:'flex',
                 listStyle:'none',
                 justifyContent:'space-between',
                 padding: 0,
                 width:'60%',
-                minWidth: '262px'
+                minWidth: '262px',
+                marginLeft:'8px',
             },
             '& > div > ul > li': {
                 color: 'var(--color-primary)',
                 height: 'fit-content',
                 textDecoration: 'none',
+                '& Link':{
+                    margin: 'auto 0'
+                },
                 '& a': {
                     color:'var(--color-primary)', 
                     textDecoration: 'none',
@@ -97,19 +123,6 @@ export const NavBarStyle = theme => {
                     color:'var(--color-terciary)',
                     borderBottom: 'solid #da7f8f 2px',  
                 },        
-            },
-            '& > form':{
-                display:'flex',
-                alignItems:'center',
-                justifyContent:'flex-end',
-                gap:'3%',
-                width:'30%',
-                marginTop:'22px',
-                '& input': {
-                    border:'none',
-                    borderRadius: '5px',
-                    padding:'1%',
-                },
             },
             '@media (max-width:800px)': {
                 '& > div': {
@@ -131,6 +144,12 @@ export const NavBarStyle = theme => {
                 }
             }, 
         },
+        logoItems:{
+            display:'flex',
+            alignItems:'flex-start',
+            justifyContent:'space-between',
+            width:'40%',
+        },
         menuMobile:{
             display:'none',
             '& div':{
@@ -144,6 +163,19 @@ export const NavBarStyle = theme => {
                 flexDirection:'column'
             }
             
-        }        
+        },
+        productos:{
+            textAlign:'center',
+            width:'100%',
+            marginLeft:'31px',
+            marginRight:'31px',
+        },
+        contacto:{
+            '&:hover':{
+                color:'var(--color-terciary)',
+                borderBottom: 'solid #da7f8f 2px', 
+                cursor:'pointer'
+            }  
+        }       
     })
 }

@@ -15,13 +15,13 @@ export const Cart = ({ item }) => {
             <article>
                 <div className={classes.infoItemContainer}>
                     <img src={item.item.pictureUrl} alt={item.item.title}/>
-                    <p>{item.item.title}</p>
-                    <p>{item.quantity}</p>
-                    <p>{item.color}</p>
+                    <p className={classes.itemTitle}>{item.item.title}</p>
+                    <p className={classes.itemQuantity}>{item.quantity}</p>
+                    <p className={classes.itemcolor}>{item.color}</p>
                 </div>
                 <div className={classes.divisor}></div>
                 <div className={classes.precioContainer}>
-                    <p>Precio: ${item.item.price}</p>
+                    {item.combo===false ? <p>Precio: ${item.item.price}</p> : <p>Precio: <del>${item.item.price}</del><strong>  ${item.item.price*0.8}</strong></p>}
                     <button onClick={e => removeItem(item.item.id)}><Delete/></button>
                 </div>
             </article>

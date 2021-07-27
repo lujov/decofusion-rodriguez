@@ -3,8 +3,8 @@ export const CardWidgetsStyle = theme => {
        container: {
            cursor:'pointer',
            position:'absolute',
-            // display:'flex',
-            marginRight: "10px",
+           right:'30px',
+           top: '30px'
        },
        cartIcon:{
            '& :hover':{

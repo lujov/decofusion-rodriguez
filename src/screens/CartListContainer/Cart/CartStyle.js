@@ -9,7 +9,20 @@ export const CartStyle = theme => {
                 justifyContent:'space-between',
                 alignItems:'center',
                 backgroundColor:'#fcf9f9',
-                margin: '8px 6px 8px 6px',  
+                margin: '8px 6px 8px 6px', 
+                '@media (max-width:1012px)' : {
+                    flexDirection:'column',
+                    height:'fit-content',
+                    marginTop: '5%'
+                }, 
+            }, 
+            '@media (max-width:1012px)' : {
+                marginTop: '4%',
+                borderTop:'solid 2px grey',
+            },
+            '@media (max-width:745px)' : {
+                marginTop: '4%',
+                borderTop:'solid 2px grey',
             },  
         },
         precioContainer:{
@@ -23,6 +36,12 @@ export const CartStyle = theme => {
             fontFamily: "'Didact Gothic', sans-serif",
             fontSize:'1.5rem',
             backgroundColor:'#fcf9f9',
+            '@media (max-width:1012px)' : {
+                width:'80%'
+            },
+            '@media (max-width:745px)' : {
+                width:'80%'
+            },
             '& span':{
                 marginLeft:'4px',
             },
@@ -65,11 +84,35 @@ export const CartStyle = theme => {
                 height:'150px',
                 width:'auto'
             },
+            '@media (max-width:1012px)' : {
+                width:'80%'
+            }, 
+            '@media (max-width:745px)' : {
+                width:'80%',
+                flexWrap:'wrap',
+                height:'fit-content',
+            }, 
+        },
+        itemTitle:{
+            width:'35%',
+            textAlign: 'center',
+        },
+        itemQuantity:{
+            textAlign: 'center',
+        },
+        itemcolor:{
+            width:'35%',
+            textAlign: 'center',
         },
         divisor:{
             height:'90%',
             width:'1px',
             backgroundColor:'#dda4ae',
+            '@media (max-width:1012px)' : {
+                height:'1px',
+                width:'90%',
+                marginTop: '2%'
+            },
         }
             
     })

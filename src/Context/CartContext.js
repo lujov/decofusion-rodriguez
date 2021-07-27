@@ -1,4 +1,5 @@
 import React, {createContext,useState} from "react";
+import { dataBase } from '../firebase/fireBase';
 
 export const CartContext = createContext();
 
@@ -13,7 +14,8 @@ export const CartComponentContext = props => {
                 {
                 item: item,
                 color: color,
-                quantity: quantity
+                quantity: quantity,
+                combo: false
                 }
             ])
         } else if (itemsInCart.length===0 && cart.length>0) {
@@ -22,7 +24,8 @@ export const CartComponentContext = props => {
                 ,{
                 item: item,
                 color: color,
-                quantity: quantity
+                quantity: quantity,
+                combo: false
                 }
             ])
         } else {
@@ -41,6 +44,20 @@ export const CartComponentContext = props => {
 
     }
 
+    const addItemCombo = (comboId) => {
+        const itemCollection = dataBase.collection("productos");
+        const itemsCombo = itemCollection.where('comboId','==',comboId);
+
+        itemsCombo.get().then((querySnapshot) => {
+            if(querySnapshot.size === 0) {
+                console.log('No results!')
+            }
+            let newCombo = querySnapshot.docs.map(doc=> ({id: doc.id, item: doc.data(),quantity: 1,combo: true}))
+            setCart([...cart,...newCombo])
+        })
+        
+    }
+
     const removeItem = (itemId) => {
         const itemsNotRemove = cart.filter(producto => producto.item.id !== itemId);
         setCart(itemsNotRemove);
@@ -50,7 +67,7 @@ export const CartComponentContext = props => {
         setCart([]);
     }
 
-  return <CartContext.Provider value={{ addItem,removeItem,clear,cart }}>
+  return <CartContext.Provider value={{ addItem,removeItem,clear,cart,addItemCombo }}>
     {props.children}
   </CartContext.Provider>
 

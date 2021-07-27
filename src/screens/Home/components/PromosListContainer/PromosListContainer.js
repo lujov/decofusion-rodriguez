@@ -23,8 +23,8 @@ const promos = () => {
                 },
                 {
                     id: 3, 
-                    pictureUrl: "https://images.unsplash.com/photo-1564446586861-7469f94e9c98?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
-                    title: "Combo jardin",
+                    pictureUrl: "https://images.unsplash.com/photo-1606425288528-4cebbfc69de7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
+                    title: "Combo estar",
                 },
                 {
                     id: 4, 

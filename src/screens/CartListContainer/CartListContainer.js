@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => CartListContainerStyle(theme));
 export const CartListContainer = () => {
     const classes = useStyles();
     const [loader,setLoader] = useState(false);
+    const [idCompra,setIdCompra] = useState();
 
     const sendOrder = (name,phone,email,cart,price) => {
 
@@ -29,7 +30,7 @@ export const CartListContainer = () => {
         };
     
         orders.add(newOrder).then(doc => 
-            alert(`Compra realizada con éxito. Tu id es: ${doc.id}`)
+            setIdCompra(`Compra realizada con éxito. Tu id es: ${doc.id}`)
         )
 
         .catch(err => {
@@ -41,7 +42,7 @@ export const CartListContainer = () => {
     }
 
     return <section className={classes.container}>
-        <CartList sendOrder={sendOrder} />
+        <CartList sendOrder={sendOrder} idCompra={idCompra} />
         {
             loader && 
                 <Loader

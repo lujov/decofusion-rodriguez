@@ -90,6 +90,20 @@ export const ItemDetailStyle = theme => {
             width:'30%',
             marginBottom: '4%',
         },
+        notFoundContainer:{
+            display: 'flex',
+            flexDirection:'column',
+            alignItems:'center',
+            width:'100%',
+            '& h1':{
+                color: '#a7bbc7',
+                fontFamily: "'Maitree', serif",
+                fontSize:'1.6rem',
+            },
+            '& img':{
+                width:'55%',
+            }
+        },
     })
     
 }

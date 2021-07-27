@@ -1,0 +1,55 @@
+import React, { useEffect, useState } from 'react';
+import { makeStyles } from '@material-ui/core';
+import { ItemComboContainerStyle } from '../ItemComboContainer/ItemComboContainerStyle';
+import { ItemList } from './components/ItemList/ItemList';
+import Loader from 'react-loader-spinner';
+import { useParams } from 'react-router-dom';
+import { dataBase} from '../../firebase/fireBase';
+
+const useStyles = makeStyles((theme) => ItemComboContainerStyle(theme));
+
+export const ItemComboContainer = () => {
+    const classes = useStyles();
+
+    const { comboId } = useParams();
+    const [productos, setProductos] = useState([]);
+    const [loader,SetLoader] = useState(false);
+
+    useEffect(() => {
+        SetLoader(true);
+        const itemCollection = dataBase.collection("productos");
+        const comboSelected = itemCollection.where('comboId','==',comboId);
+
+        comboSelected.get().then((querySnapshot) => {
+            if(querySnapshot.size === 0) {
+                console.log('No results!')
+            }
+            setProductos(querySnapshot.docs.map(doc=> ({id: doc.id, ...doc.data()})))
+        }).catch((error) => {
+            console.log("Error searching items", error);
+        }).finally(() => {
+            SetLoader(false);
+        });
+
+    },[comboId]);
+
+    return <section className={classes.container}>
+        <div className={classes.itemTitle}>
+            {comboId==="1" && <h1>Combo Oficina</h1>}
+            {comboId==="2" && <h1>Combo Cocina</h1>}
+            {comboId==="3" && <h1>Combo Estar</h1>}
+            {comboId==="4" && <h1>Combo Dormitorio</h1>}
+        </div>
+        {
+            loader && 
+                <Loader
+                type="Puff"
+                color="#da7f8f"
+                height={100}
+                width={100}
+            />
+        }
+        <ItemList items={productos} comboId={comboId}/>
+    </section>;     
+    
+  }
