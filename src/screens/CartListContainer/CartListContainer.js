@@ -21,7 +21,7 @@ export const CartListContainer = () => {
         const newOrder = {
             buyer: {
                 name: name,
-                phone: phone,
+                phone: parseInt(phone),
                 email: email
             },
             items: cart, 
